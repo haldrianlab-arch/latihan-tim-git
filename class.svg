@@ -1,0 +1,70 @@
+<svg width="1050" height="750" xmlns="http://www.w3.org/2000/svg" style="background-color: #f8fafc; font-family: sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" />
+    </marker>
+    <marker id="arrow-dashed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cbd5e1" />
+    </marker>
+  </defs>
+
+  <rect x="20" y="20" width="220" height="710" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="35" y="50" fill="#166534" font-weight="bold" font-size="14">ZONA 1: Auth &amp; Master</text>
+  
+  <rect x="260" y="20" width="760" height="220" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="275" y="50" fill="#9a3412" font-weight="bold" font-size="14">ZONA 3: Material &amp; BOM</text>
+
+  <rect x="260" y="260" width="760" height="200" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="275" y="290" fill="#1e3a8a" font-weight="bold" font-size="14">ZONA 2: Alur Proses Utama (Kiri ke Kanan)</text>
+
+  <rect x="260" y="480" width="760" height="250" rx="10" fill="#fdf4ff" stroke="#d8b4fe" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="275" y="510" fill="#6b21a8" font-weight="bold" font-size="14">ZONA 4: Histori &amp; Log Transaksi</text>
+
+
+  <path d="M 200 375 Q 350 200 680 150" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-dashed)"/> <path d="M 200 375 L 470 375" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-dashed)"/> <path d="M 200 375 Q 350 500 770 560" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow-dashed)"/> <line x1="420" y1="115" x2="470" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="115" x2="680" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="755" y1="140" x2="755" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="755" y1="220" x2="755" y2="350" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="420" y1="375" x2="470" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="375" x2="680" y2="375" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 545 400 Q 720 470 880 400" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="545" y1="560" x2="545" y2="400" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/> <path d="M 810 560 L 780 400" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/> <path d="M 850 560 L 920 400" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/> <path d="M 680 660 Q 580 400 700 140" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/> <path d="M 730 635 L 755 400" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/> <rect x="50" y="350" width="150" height="50" rx="5" fill="#ffffff" stroke="#166534" stroke-width="2" />
+  <text x="125" y="380" font-weight="bold" font-size="14" fill="#166534" text-anchor="middle">users</text>
+
+  <rect x="270" y="90" width="150" height="50" rx="5" fill="#ffffff" stroke="#9a3412" stroke-width="2" />
+  <text x="345" y="120" font-weight="bold" font-size="14" fill="#9a3412" text-anchor="middle">bom_template</text>
+
+  <rect x="470" y="90" width="150" height="50" rx="5" fill="#ffffff" stroke="#9a3412" stroke-width="2" />
+  <text x="545" y="120" font-weight="bold" font-size="13" fill="#9a3412" text-anchor="middle">bom_template_item</text>
+
+  <rect x="680" y="90" width="150" height="50" rx="5" fill="#ffffff" stroke="#9a3412" stroke-width="2" />
+  <text x="755" y="120" font-weight="bold" font-size="14" fill="#9a3412" text-anchor="middle">material</text>
+
+  <rect x="680" y="170" width="150" height="50" rx="5" fill="#ffffff" stroke="#9a3412" stroke-width="2" />
+  <text x="755" y="200" font-weight="bold" font-size="14" fill="#9a3412" text-anchor="middle">bom_item</text>
+
+  <rect x="270" y="350" width="150" height="50" rx="5" fill="#ffffff" stroke="#1e3a8a" stroke-width="2" />
+  <text x="345" y="380" font-weight="bold" font-size="14" fill="#1e3a8a" text-anchor="middle">tanda_terima</text>
+
+  <rect x="470" y="350" width="150" height="50" rx="5" fill="#ffffff" stroke="#1e3a8a" stroke-width="2" />
+  <text x="545" y="380" font-weight="bold" font-size="14" fill="#1e3a8a" text-anchor="middle">antrian</text>
+
+  <rect x="680" y="350" width="150" height="50" rx="5" fill="#ffffff" stroke="#1e3a8a" stroke-width="2" />
+  <text x="755" y="380" font-weight="bold" font-size="14" fill="#1e3a8a" text-anchor="middle">spk</text>
+
+  <rect x="850" y="350" width="150" height="50" rx="5" fill="#ffffff" stroke="#1e3a8a" stroke-width="2" />
+  <text x="925" y="380" font-weight="bold" font-size="14" fill="#1e3a8a" text-anchor="middle">surat_jalan</text>
+
+  <rect x="470" y="560" width="150" height="50" rx="5" fill="#ffffff" stroke="#6b21a8" stroke-width="2" />
+  <text x="545" y="590" font-weight="bold" font-size="14" fill="#6b21a8" text-anchor="middle">status_log</text>
+
+  <rect x="750" y="560" width="150" height="50" rx="5" fill="#ffffff" stroke="#6b21a8" stroke-width="2" />
+  <text x="825" y="590" font-weight="bold" font-size="14" fill="#6b21a8" text-anchor="middle">approval_log</text>
+
+  <rect x="660" y="635" width="150" height="50" rx="5" fill="#ffffff" stroke="#6b21a8" stroke-width="2" />
+  <text x="735" y="665" font-weight="bold" font-size="14" fill="#6b21a8" text-anchor="middle">stok_log</text>
+
+</svg>
