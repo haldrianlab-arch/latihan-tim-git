@@ -44,7 +44,7 @@ Virus berhasil masuk kedalam sistem, tetapi belum menjalankan aktivitas apapun(m
 
 **2. Propagation (Fase Penyebaran)**
 
-Fase ini dimulai begitu file inang yang terinfeksi dijalankan, dan bersifat tidak opsional — hampir semua virus melewati fase ini karena replikasi diri adalah ciri utama sebuah virus. Virus mulai menggandakan dirinya dengan menyalin kode virus ke file, program, atau media penyimpanan lain, sehingga jumlah file yang terinfeksi semakin banyak dan virus lebih mudah bertahan serta menyebar ke sistem lain. Tujuan utama fase ini adalah memperluas penyebaran infeksi, bukan menjalankan aksi utama (payload), sehingga pada fase ini virus umumnya belum merusak atau menghapus data.
+Ciri utama virus komputer adalah mampu mereplikasi (menggandakan) dirinya. Fase ini dimulai ketika file inang yang terinfeksi dijalankan. Virus kemudian menyalin kode dirinya ke file, program, media penyimpanan, atau sistem lain untuk mempertahankan keberadaannya sekaligus memperluas penyebaran infeksi. Pada fase ini, virus umumnya belum menjalankan aksi utamanya (payload), seperti merusak atau menghapus data.
 
 **3. Triggering (Fase Pemicu)**
 
