@@ -40,7 +40,7 @@ Memastikan bahwa data yang dikirim dan diterima sama persis, tanpa mengalami per
 
 **1. Dormant (Fase Tidur)**
 
-Virus berhasil masuk kedalam sistem, tetapi belum menjalankan aktivitas apapun(menunggu kondisi tertentu tercapai untuk mulai bekerja). fase ini bersifat opsional, karena ada juga virus yang langsung masuk fase berikutnya(menyebar) begitu file inangnya dijalankan. 
+Virus berhasil masuk kedalam sistem, tetapi belum menjalankan aktivitas apapun(menunggu kondisi/syarat tertentu tercapai untuk mulai bekerja). fase ini bersifat opsional, karena ada juga virus yang langsung masuk fase berikutnya(menyebar) begitu file inangnya dijalankan. 
 
 **2. Propagation (Fase Penyebaran)**
 
@@ -48,11 +48,11 @@ Ciri utama virus komputer adalah mampu mereplikasi (menggandakan) dirinya. Fase 
 
 **3. Triggering (Fase Pemicu)**
 
-Setelah berhasil menyebar, virus akan menunggu hingga syarat (trigger) yang telah diprogram sebelumnya terpenuhi. Trigger dapat berupa tanggal tertentu, jumlah eksekusi program, pengguna membuka file tertentu, atau kondisi lainnya. Ketika syarat tersebut terpenuhi, virus siap menjalankan aksi utamanya.
+Setelah virus aktif/menyebar, virus akan menunggu hingga syarat (trigger) yang telah diprogram sebelumnya terpenuhi. Trigger dapat berupa tanggal tertentu, jumlah eksekusi program, pengguna membuka file tertentu, atau kondisi lainnya. Ketika syarat tersebut terpenuhi, virus siap menjalankan aksi utamanya (payload).
 
 **4. Execution (Fase Eksekusi)**
 
-Setelah pemicu terpenuhi, virus menjalankan payload, yaitu aksi utama yang telah dirancang oleh pembuatnya. Payload dapat berupa tindakan ringan, seperti menampilkan pesan atau mengubah tampilan layar, hingga tindakan berbahaya, seperti menghapus data, merusak file, mencuri informasi, atau mengganggu kinerja sistem.
+Setelah trigger terpenuhi, virus menjalankan payload, yaitu aksi utama yang telah dirancang oleh pembuatnya. Payload dapat berupa tindakan ringan, seperti menampilkan pesan atau mengubah tampilan layar, hingga tindakan berbahaya, seperti menghapus data, merusak file, mencuri informasi, atau mengganggu kinerja sistem.
 
 ---
 
