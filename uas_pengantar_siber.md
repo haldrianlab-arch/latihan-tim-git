@@ -4,32 +4,34 @@
 
 ---
 
-## 1. Tujuan SSL
+## Tujuan Utama SSL/TLS
 
-### Tujuan SSL/TLS Secara Teknis (Alur Interaksi Client ↔ Server)
+Tujuan utama SSL/TLS adalah mengamankan komunikasi data antara dua sistem (misal: client-server) di jaringan. SSL/TLS memiliki 3 fungsi utama:
 
-**1. Autentikasi (satu arah, server → client)**
+### Autentikasi (Membangun Kepercayaan)
 
-Server menyimpan sertifikat digital (X.509) berisi public key + identitas, ditandatangani CA. Saat handshake, **server mengirim sertifikat ini ke client**, lalu **client memverifikasinya** — cek chain of trust ke root CA, masa berlaku, dan kecocokan domain. Hasilnya: client yakin sedang bicara dengan server asli, bukan penyamar (mencegah MITM/spoofing).
+Memastikan sistem terhubung ke tujuan aslinya, misal client terhubung ke server asli dan mencegah serangan spoofing/MITM.
 
-*(Opsional: mTLS — client juga kirim sertifikat, server yang verifikasi balik. Jadi autentikasi dua arah.)*
+**Cara kerja:**
+* Saat fase handshake, server mengirimkan sertifikat digital yang ditandatangani oleh CA, kemudian client akan memverifikasi chain of trust sertifikat ini.
+* Terdapat juga opsi mTLS jika diperlukan autentikasi dua arah.
 
-**2. Kerahasiaan data (session key, dua arah)**
+### Kerahasiaan Data (Enkripsi)
 
-Client dan server bersama-sama membentuk **session key** lewat proses key exchange saat handshake. Session key inilah yang dipakai untuk mengenkripsi seluruh komunikasi setelahnya — **server mengenkripsi response ke client**, **client mengenkripsi request ke server**. Tujuannya: walau ada pihak yang menyadap lalu lintas data, isi komunikasi tetap tidak bisa dibaca.
+Mencegah pihak tidak berwenang membaca/menyadap isi komunikasi antara client dan server.
 
-**3. Integritas data (dua arah, saling verifikasi)**
+**Cara kerja:**
+* Saat fase handshake, klien dan server melakukan key exchange untuk menghasilkan session key.
+* Session key ini digunakan mengenkripsi (dan dekripsi) data yang dipertukarkan dengan mengubah plaintext menjadi ciphertext.
 
-Setiap paket yang dikirim — baik dari **server ke client** maupun **client ke server** — ditambahkan MAC/HMAC. Pihak penerima (siapapun itu) akan mengecek MAC ini untuk mendeteksi apakah data diubah di jalan.
+### Integritas Data (Mencegah Modifikasi)
 
----
+Memastikan bahwa data yang dikirim dan diterima sama persis, tanpa mengalami perubahan selama proses transmisi.
 
-**Pola yang perlu diingat:**
-- Langkah 1 itu *sequential* (server dulu baru client verifikasi)
-- Langkah 2 dan 3 itu *dua arah* (mekanisme sama, berlaku ke kedua sisi begitu session key terbentuk)
-
-Semua ini terjadi dalam satu proses yang disebut **TLS Handshake**, sebelum data aplikasi (HTTP) mulai dikirim.
-
+**Cara kerja:**
+* Setelah proses handshake selesai, setiap data yang dikirim dilindungi dengan mekanisme pemeriksaan integritas kriptografis.
+* Penerima (klien maupun server) akan memverifikasi integritas data tersebut.
+* Jika data terdeteksi telah diubah atau dirusak selama transmisi, data akan ditolak dan koneksi dapat dihentikan.
 ---
 
 ## 2. Siklus Virus
