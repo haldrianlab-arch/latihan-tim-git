@@ -40,7 +40,7 @@ Memastikan bahwa data yang dikirim dan diterima sama persis, tanpa mengalami per
 
 **1. Dormant (Fase Tidur)**
 
-Virus berhasil masuk ke dalam sistem, tetapi belum menjalankan aktivitas apa pun. Virus hanya berada di komputer sambil menunggu kondisi tertentu agar dapat mulai bekerja, misalnya tanggal tertentu, program dijalankan beberapa kali, atau kondisi lain yang telah ditentukan. Fase ini bersifat opsional karena tidak semua virus diprogram untuk menunda aktivasinya — jika pembuat virus tidak menambahkan syarat tunggu, virus bisa langsung menyebar begitu file inangnya dijalankan.
+Virus berhasil masuk kedalam sistem, tetapi belum menjalankan aktivitas apapun(menunggu kondisi tertentu tercapai untuk mulai bekerja). fase ini bersifat opsional, karena ada juga virus yang langsung masuk fase berikutnya(menyebar) begitu file inangnya dijalankan. 
 
 **2. Propagation (Fase Penyebaran)**
 
