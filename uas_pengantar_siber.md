@@ -235,5 +235,77 @@ Karena SSID tidak muncul di daftar WiFi otomatis, koneksi harus dilakukan manual
 
 ---
 
-## 6. (Kisi-kisi berikutnya — menyusul)
+## 6. Serangan Terhadap Email dan Basis Data
+
+### A. Serangan Terhadap Email
+
+**1. Phishing**
+Penyerang mengirim email yang menyamar sebagai pihak terpercaya (bank, perusahaan, layanan resmi) untuk menipu korban agar memberikan informasi sensitif (password, data kartu kredit) atau mengklik tautan berbahaya. Biasanya memanfaatkan urgensi atau rasa takut agar korban bertindak cepat tanpa berpikir panjang.
+
+**2. Email Spoofing**
+Penyerang memalsukan alamat pengirim email sehingga terlihat seolah berasal dari sumber yang sah/terpercaya, padahal aslinya dikirim dari pihak lain. Teknik ini sering jadi dasar dari serangan phishing agar korban lebih mudah percaya. Secara teknis, hal ini cukup dilakukan dengan mengubah header email sesuka penyerang — tanpa butuh tool khusus — namun aktivitas pengirimannya tetap tercatat di log server MTA/SMTP.
+
+**3. Spamming**
+Pengiriman email dalam jumlah besar secara tidak diminta (unsolicited), biasanya berisi iklan, penipuan, atau tautan berbahaya. Selain mengganggu, spam juga bisa jadi kendaraan untuk menyebarkan malware atau phishing, bahkan bisa berkembang jadi bentuk serangan DoS jika volumenya membuat server jadi lambat/mati.
+
+**4. Email Bombing/Mail Bomb**
+Mengirim email dalam jumlah sangat besar ke satu alamat target dalam waktu singkat, bertujuan membanjiri/membebani mailbox atau server sehingga tidak bisa berfungsi normal (mirip prinsip DoS, tapi lewat email).
+
+**5. Malware via Email Attachment**
+Penyerang menyisipkan malware (virus, trojan, ransomware) dalam lampiran email yang tampak tidak berbahaya (dokumen, gambar, file terkompresi). Begitu korban membuka lampiran, malware aktif dan menginfeksi sistem.
+
+**6. Email Hijacking/Account Takeover**
+Penyerang berhasil mendapatkan akses tidak sah ke akun email seseorang (lewat phishing, credential theft, atau kebocoran password), lalu menggunakan akun tersebut untuk mengirim pesan penipuan ke kontak korban atau mencuri informasi lebih lanjut.
+
+**7. Penyadapan Email (Eavesdropping/Sniffing)**
+Email pada dasarnya bersifat terbuka seperti kartu pos — isinya bisa dibaca siapa saja yang berhasil menyadapnya. Email dikirim oleh MTA "hopping" dari satu server ke server lain sampai ke tujuan, sehingga potensi penyadapan bisa terjadi di setiap titik yang dilalui. Ini mengancam aspek **konfidensialitas**, berbeda dari phishing yang menipu korban secara langsung — di sini korban bahkan tidak sadar komunikasinya disadap.
+
+**8. Mail Relay (Penyalahgunaan Relay Email)**
+Penyerang menggunakan server email milik pihak lain (tanpa izin) untuk meneruskan/mengirim email miliknya sendiri. Akibatnya, bandwidth server korban terpakai untuk mengirim email dalam jumlah besar, dan penerima email jadi terkelabui karena mengira email berasal dari server yang sah tersebut.
+
+---
+
+### B. Serangan Terhadap Basis Data
+
+**1. SQL Injection**
+Penyerang menyisipkan perintah SQL berbahaya lewat input yang tidak divalidasi dengan baik (misal form login atau kolom pencarian), sehingga bisa memanipulasi query database untuk melihat, mengubah, atau menghapus data tanpa otorisasi — bahkan bisa melewati proses autentikasi.
+**Studi kasus:** teknik ini pernah dipakai untuk membobol situs KPU pada Pemilu 2004 oleh Dani Firmansyah alias "Xnuxer" — ia berhasil masuk sebagai web administrator hanya dengan mengetahui username, tanpa perlu password, scanning port, dan tanpa terdeteksi firewall.
+
+**2. Unauthorized Access**
+Akses ke basis data oleh pihak yang tidak memiliki hak, biasanya karena kredensial yang lemah, celah keamanan pada sistem, atau kesalahan konfigurasi hak akses (privilege).
+
+**3. Privilege Escalation**
+Penyerang yang awalnya hanya punya akses terbatas berhasil menaikkan level aksesnya (misal dari user biasa menjadi admin), sehingga bisa melakukan aksi yang seharusnya tidak diizinkan pada database.
+
+**4. Data Leakage/Kebocoran Data**
+Data sensitif dalam basis data terekspos ke pihak yang tidak berwenang, bisa akibat kesalahan konfigurasi, celah keamanan, atau human error (misal database ter-backup di server publik tanpa proteksi).
+
+**5. Inference Attack**
+Penyerang menyimpulkan informasi rahasia dari basis data dengan menganalisis pola hasil query yang diizinkan, meski tidak memiliki akses langsung ke data mentahnya. Contoh: menyimpulkan gaji seseorang dari data statistik agregat yang seharusnya anonim.
+
+**6. Denial of Service (DoS) pada Basis Data**
+Membanjiri database dengan query/permintaan dalam jumlah besar sehingga database menjadi lambat atau berhenti merespons, mengganggu operasional sistem yang bergantung padanya.
+
+**7. Klasifikasi Umum Ancaman Keamanan: Interruption, Interception, Modification, Fabrication**
+Kerangka klasik untuk mengkategorikan jenis serangan pada sistem informasi (termasuk basis data):
+- **Interruption** — penghentian sebuah proses yang sedang berjalan (mengancam *availability*, contoh: DoS).
+- **Interception** — menyela/mendengarkan proses yang berjalan tanpa izin (mengancam *confidentiality*, contoh: sniffing, inference attack).
+- **Modification** — mengubah data tanpa izin dari pihak otoritas (mengancam *integrity*, contoh: SQL injection yang mengubah data).
+- **Fabrication** — perusakan/pemalsuan mendasar pada sistem utama (mengancam *authenticity*, contoh: pemalsuan identitas untuk masuk sistem).
+
+**8. Ancaman Disengaja vs Tidak Disengaja**
+Ancaman pada basis data dibagi berdasarkan ada-tidaknya niat:
+- **Tidak disengaja:** kerusakan selama proses transaksi, gangguan akibat akses database yang konkuren (bersamaan), masalah akibat distribusi data di banyak komputer, atau logic error yang mengancam konsistensi database.
+- **Disengaja (oleh pihak tanpa otoritas):** pengambilan/pembacaan data, pengubahan data, dan penghapusan data secara sengaja.
+
+**9. Sumber Kerentanan (Titik Lemah) Sistem Basis Data**
+Empat titik yang jadi sumber celah keamanan basis data:
+- **Fisik** — lokasi sistem komputer harus aman secara fisik dari serangan perusakan.
+- **User** — wewenang user harus diatur hati-hati agar tidak ada manipulasi oleh user lain yang tidak berwenang.
+- **Sistem Operasi** — kelemahan OS memungkinkan akses oleh user tak berwenang, karena hampir semua sistem basis data berjalan online.
+- **Sistem Basis Data** — akibat pengaturan hak akses pengguna yang kurang baik.
+
+---
+
+**Benang merah:** serangan terhadap email umumnya memanfaatkan **manipulasi/penyamaran identitas dan kepercayaan (social engineering)**, sedangkan serangan terhadap basis data umumnya memanfaatkan **celah teknis pada validasi input dan kontrol akses** — dan keduanya bisa dipetakan ke 4 kategori umum Interruption/Interception/Modification/Fabrication di atas.
 
