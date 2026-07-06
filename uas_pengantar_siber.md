@@ -83,7 +83,7 @@ tindakan merusak, mengubah, atau menghapus data maupun sistem secara sengaja. Pe
 ### Sidik Jari (Fingerprint)
 
 **Kelebihan:**
-- Praktis dan ekonomis: mudah digunakan(cukup dengan menempelkan jari ke sensor untuk merekam pola sidik jari unik) dan proses autentikasi cepat, serta biaya implementasi yang relatif murah dan mudah diintegrasikan ke berbagai perangkat.
+- Praktis dan ekonomis: mudah digunakan dan proses autentikasi cepat(cukup dengan menempelkan jari ke sensor untuk merekam pola sidik jari unik), serta biaya implementasi yang relatif murah dan mudah diintegrasikan ke berbagai perangkat.
 
 **Kekurangan:**
 - **Sensitif terhadap kondisi jari**, seperti basah, kotor, terluka, atau aus sehingga dapat menurunkan akurasi.
