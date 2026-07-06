@@ -86,11 +86,7 @@ tindakan merusak, mengubah, atau menghapus data maupun sistem secara sengaja. Pe
 - Praktis dan ekonomis: mudah digunakan dan proses autentikasi cepat (cukup dengan menempelkan jari pada sensor untuk memindai dan mencocokkan pola sidik jari unik), serta biaya implementasi relatif murah dan mudah diintegrasikan ke berbagai perangkat.
 
 **Kekurangan:**
-- **Sensitif terhadap kondisi jari**, seperti basah, kotor, terluka, atau aus sehingga dapat menurunkan akurasi.
-- **Berpotensi dipalsukan (spoofing)** karena sidik jari yang tertinggal pada permukaan benda dapat diduplikasi dengan teknik tertentu.
-- **Memerlukan kontak fisik**, sehingga kurang higienis jika digunakan bersama.
-- **Tidak dapat diubah** jika data biometriknya bocor.
-
+Rentan terhadap pemalsuan (spoofing): sidik jari dapat disalin dari bekas yang tertinggal pada permukaan dan direplikasi.
 ---
 
 ### Pola Retina (Retina Scan)
