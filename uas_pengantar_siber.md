@@ -105,8 +105,7 @@ Lebih rentan terhadap pemalsuan (spoofing) dibanding biometrik seperti retina ka
 
 | Aspek | Sidik Jari | Pola Retina |
 |---|---|---|
-| Keamanan | Tinggi | Sangat tinggi |
-| Akurasi | Tinggi | Sangat tinggi |
+| Keamanan/Akurasi(EER/DET) | Tinggi | Sangat tinggi |
 | Kecepatan | Cepat | Lebih lambat |
 | Biaya | Murah | Mahal |
 | Kemudahan penggunaan | Mudah | Kurang nyaman |
