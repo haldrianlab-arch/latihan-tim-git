@@ -86,23 +86,18 @@ tindakan merusak, mengubah, atau menghapus data maupun sistem secara sengaja. Pe
 - Praktis dan ekonomis: mudah digunakan dan proses autentikasi cepat (cukup dengan menempelkan jari pada sensor untuk memindai dan mencocokkan pola sidik jari unik), serta biaya implementasi relatif murah dan mudah diintegrasikan ke berbagai perangkat.
 
 **Kekurangan:**
-Rentan terhadap pemalsuan (spoofing): sidik jari dapat disalin dari bekas yang tertinggal pada permukaan dan direplikasi.
+Lebih rentan terhadap pemalsuan (spoofing) dibanding biometrik seperti retina karena sidik jari dapat disalin dari jejak yang tertinggal pada permukaan.
 
 ---
 
 ### Pola Retina (Retina Scan)
 
 **Kelebihan:**
-- **Akurasi dan keamanan sangat tinggi** karena pola pembuluh darah pada retina sangat unik.
-- **Sangat sulit dipalsukan** karena pola pembuluh darah retina berada di dalam mata dan tidak dapat ditiru dengan foto atau cetakan.
-- **Tidak mudah rusak oleh faktor eksternal** karena letaknya di bagian dalam mata.
-- **Cocok untuk sistem dengan keamanan tingkat tinggi**.
+- Keamanan tinggi: sangat sulit dipalsukan(karena pola pembuluh darah retina terletak didalam mata) sehingga memberikan tingkat keamanan autentikasi yang tinggi.
 
 **Kekurangan:**
-- **Biaya perangkat mahal** karena menggunakan teknologi pemindaian optik khusus.
-- **Kurang nyaman digunakan**, pengguna harus memosisikan mata dengan tepat saat pemindaian.
-- **Proses autentikasi relatif lebih lambat** dibanding sidik jari.
-- **Dapat dipengaruhi kondisi kesehatan mata**, seperti katarak atau gangguan retina.
+
+- Kurang praktis dan lebih mahal: proses autentikasi memerlukan pemindaian mata dengan posisi yang tepat serta perangkat yang lebih kompleks, mahal, dan lambat dibandingkan sidik jari.
 
 ---
 
