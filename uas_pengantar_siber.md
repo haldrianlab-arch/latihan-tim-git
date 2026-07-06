@@ -87,6 +87,7 @@ tindakan merusak, mengubah, atau menghapus data maupun sistem secara sengaja. Pe
 
 **Kekurangan:**
 Rentan terhadap pemalsuan (spoofing): sidik jari dapat disalin dari bekas yang tertinggal pada permukaan dan direplikasi.
+
 ---
 
 ### Pola Retina (Retina Scan)
