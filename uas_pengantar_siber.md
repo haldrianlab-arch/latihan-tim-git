@@ -58,19 +58,19 @@ Setelah trigger terpenuhi, virus menjalankan payload, yaitu aksi utama yang tela
 
 ## 3. Kategori Cyber Crime
 
-Berdasarkan PPT kuliah, cyber crime dibagi menjadi 3 kategori berdasarkan **jenis pelanggaran yang dilakukan pelaku terhadap sistem/data** (bukan berdasarkan siapa korbannya). Ketiganya sama-sama soal tindakan **tanpa izin (unauthorized)**, tapi beda di objek yang dilanggar: hak cipta, hak akses, atau keutuhan sistem.
+Cyber crime berdasarkan jenis pelanggarannya dibagi menjadi tiga kategori, yaitu cyber piracy, cyber trespass, dan cyber vandalism. Ketiganya merupakan tindakan tanpa izin (unauthorized), tetapi berbeda pada objek yang dilanggar.
 
 **1. Cyber Piracy**
 
-Cyber piracy adalah tindakan **menggandakan atau mendistribusikan** karya digital (software, musik, film, data) **tanpa izin** dari pemilik hak cipta. Pelaku tidak merusak atau mengakses secara ilegal — pelanggarannya ada pada **hak kepemilikan intelektual**. Contoh: membajak software berbayar, menyebarkan film/musik secara ilegal lewat internet, menggunakan lisensi software bajakan.
+tindakan menggandakan atau mendistribusikan karya digital tanpa izin pemilik hak cipta. Pelanggarannya terdapat pada hak cipta. Contoh: software bajakan dan penyebaran film atau musik ilegal.
 
 **2. Cyber Trespass**
 
-Cyber trespass adalah tindakan **memasuki/mengakses sistem, jaringan, atau data milik orang lain tanpa izin (unauthorized access)**. Pelaku "masuk ke wilayah" yang bukan haknya — mirip konsep *trespassing* di dunia fisik (masuk properti orang lain tanpa izin). Contoh: hacking ke akun/sistem orang lain, membobol database perusahaan, mengakses jaringan WiFi tanpa izin.
+tindakan mengakses sistem, jaringan, atau data milik orang lain tanpa izin (unauthorized access). Pelanggarannya terdapat pada hak akses. Contoh: membobol akun, database, atau jaringan WiFi tanpa izin.
 
 **3. Cyber Vandalism**
 
-Cyber vandalism adalah tindakan **merusak, mengubah, atau menghancurkan** data/sistem milik orang lain secara sengaja. Pelanggarannya ada pada **keutuhan/integritas dan fungsi** dari data atau sistem. Contoh: menyebarkan virus/malware yang merusak file, defacement website (mengubah tampilan situs tanpa izin), menghapus data penting milik orang lain.
+tindakan merusak, mengubah, atau menghapus data maupun sistem secara sengaja. Pelanggarannya terdapat pada keutuhan (integritas) sistem atau data. Contoh: menyebarkan malware, defacement website, dan menghapus data penting.
 
 ---
 
